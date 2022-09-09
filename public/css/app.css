@@ -1,0 +1,613 @@
+/* ------------------------ KeyFrames ------------------------- */
+
+@keyframes increaseOpacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes decreaseOpacity {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes modifyOpacity {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes modifyTranslateLeft {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(-1000px);
+
+    }
+    100% {
+        transform: translate(0);
+
+    }
+}
+@keyframes modifyTranslateRight {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(1000px);
+
+    }
+    100% {
+        transform: translate(0);
+
+    }
+}
+
+
+@keyframes slideToRight {
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* ------------------------ Wrapper ------------------------- */
+
+.wrapper {
+    min-height: 100vh;
+    width: 100%; 
+    transition: background 1s ease-in-out;  
+    overflow-y: hidden;
+
+}
+.wrapper.wrapper_home {
+    background: url(../../assets/home/background-home-desktop.jpg) center/cover;
+}
+.wrapper.wrapper_destination {
+    background: url(../../assets/destination/background-destination-desktop.jpg) center/cover;
+}
+.wrapper.wrapper_crew {
+    background: url(../../assets/crew/background-crew-desktop.jpg) center/cover;
+}
+.wrapper.wrapper_technology {
+    background: url(../../assets/technology/background-technology-desktop.jpg) center/cover;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+/* ------------------------ Header Desktop ------------------------- */
+
+.wrapper-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0 0 5rem;
+}
+
+.head-navbar {
+    background: url(./../../assets/Rectangle.png) center/cover;
+    box-shadow: black 1px 1px 5px;
+    width: 83rem;
+    height: 9.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+.menu-categories strong {
+    pointer-events: none;
+}
+.navbar-separator {
+    width: auto;
+    height: 0.2rem;
+    background:url(../../assets/Rectangle2.png) center center/cover;
+    position: absolute;
+    left: 13rem;
+    right: 80rem;
+    z-index: 3;
+}
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 54.2rem;
+    
+}
+
+.navbar-hamburger {
+    display: none;
+}
+.menu-categories {
+    font-size: 1.6rem;
+    letter-spacing: 2.7px;
+    font-family: var(--barlow);
+    color: var(--white);
+    padding: 4rem 0 4rem 0;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 400;
+
+}
+.menu-categories:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    padding: 4rem 0 3.7rem 0;
+
+    
+}
+.menu-categories.menu-categories_active {
+    border-bottom: 3px solid white;
+    padding: 4rem 0 3.7rem 0;
+    
+    
+
+}
+
+/* ------------------------ Main TEXT Desktop ------------------------- */
+
+.wrapper-content {
+width: 100%;
+min-height: calc(100vh - 12.6rem);
+display: flex;
+justify-content: space-around;
+align-items: flex-end;
+position: relative;
+padding-bottom:13.1rem ;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.text-heading5 {
+    color: var(--light);
+    font-family: var(--barlow);
+    font-size: 2.8rem;
+    letter-spacing: 4.75px;
+    margin-bottom: 2.4rem;
+    font-weight: 400;
+}
+.text-heading1 {
+    color: var(--white);
+    font-family: var(--bellefair);
+    font-size: 15rem;
+    margin-bottom: 2.4rem;
+    font-weight: 400;
+
+}
+.text-body {
+    color: var(--light);
+    font-family: var(--barlow);
+    font-size: 1.8rem;
+    line-height: 32px;
+    font-weight: 400;
+
+}
+
+/* ------------------------ Main BTN Desktop ------------------------- */
+.content-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.button-explore {
+    color: var(--dark);
+    font-size: 3.2rem;
+    font-family: var(--bellefair);
+    font-weight: 400;
+    width: 27.4rem;
+    height: 27.4rem;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.button-hover {
+    position: absolute;
+    width: 27.4rem;
+    height: 27.4rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.132);
+    transition: transform 0.25s ease-in-out;
+    z-index: 1;
+
+}
+
+.content-button:hover .button-hover {
+    transform: scale(1.642);
+}
+
+/* ------------------------ Destination Main Desktop ------------------------- */
+
+.wrapper-destinationContent {
+width: 100%;
+min-height: calc(100vh - 12.6rem);
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+position: relative;
+
+}
+.wrapper-modifier {
+height: calc(100vh - 12.6rem);
+
+}
+.content-elem {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.elem-planet {
+    opacity: 0;
+   }
+.content-sub {
+    position: relative;
+    
+    left: 16.65rem;
+    color: white;
+    font-size: 2.8rem;
+    font-family: var(--barlow);
+    letter-spacing: 4.72px;
+    font-weight: 400;
+    margin-bottom: 9.7rem;
+}
+.sub-strong {
+    color: white;
+    opacity: 0.25;
+    margin-right: 2.8rem;
+}
+
+.elem-textArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+}
+
+.navBar-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.7rem;
+}
+
+.list-element {
+    color: var(--light);
+    font-size: 1.6rem;
+    font-family: var(--barlow);
+    letter-spacing: 2.7px;
+    margin-right: 3.6rem;
+    font-weight: 400;
+    padding-bottom: 1.2rem;
+    cursor: pointer;
+}
+.list-element:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 0.9rem;
+}
+.list-element.list-element_active {
+border-bottom: 3px solid white;
+color: white;
+padding-bottom: 0.9rem;
+
+}
+.textArea-title {
+    font-size: 10rem;
+    font-family: var(--bellefair);
+    font-weight: 400;
+    color: white;
+    margin-bottom: 1.4rem;
+
+}
+.textArea-paragraph {
+    color: var(--light);
+    font-family: var(--barlow);
+    font-size: 1.8rem;
+    line-height: 32px;
+    font-weight: 400;
+    padding-bottom: 5.4rem;
+    border-bottom: #383B4B 2.5px solid;
+    margin-bottom: 2.8rem;
+    width: 50rem;
+}
+
+.textArea-data {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.data-distance {
+    display: flex;
+    flex-direction: column;
+    margin-right: 7.9rem;
+}
+.data-time {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.distance-text, .time-text {
+    color: var(--light);
+    font-family: var(--barlow);
+    font-size: 1.4rem;
+    letter-spacing: 2.36px;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+}
+.distance-value, .time-value {
+    color: var(--white);
+    font-family: var(--bellefair);
+    font-size: 2.8rem;
+    width: 15rem;
+    font-weight: 400;
+}
+/* ------------------------ Crew Main Desktop ------------------------- */
+
+.wrapper-crewContent {
+width: 100%;
+min-height: calc(100vh - 12.6rem);
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-end;
+position: relative;
+
+}
+
+.elemCrew-leftpart {
+    display: flex;
+    flex-direction: column;
+}
+.sub-strongCrew {
+    color: white;
+    opacity: 0.25;
+    margin-right: 2.8rem;
+}
+.content-subCrew {
+    
+    
+    
+    color: white;
+    font-size: 2.8rem;
+    font-family: var(--barlow);
+    letter-spacing: 4.72px;
+    font-weight: 400;
+    margin-bottom: 15.4rem;
+}
+.elem-image {
+    opacity: 0;
+    
+}
+.elem-textAreaCrew {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+}
+.elem-imageMobile, .img-container {
+display: none;
+
+}
+.navBar-listCrew {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.7rem;
+}
+.content-elemCrew {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.elem-imgDesktopContainer {
+    width: 65rem;
+    height: 72rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.list-elementCrew { 
+    margin-right: 2.4rem;
+    border-radius: 50%; 
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.17);
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+.list-elementCrew:hover {
+    background-color: rgba(255, 255, 255, 0.50);
+
+}
+.list-elementCrew.list-elementCrew_active {
+    background-color: rgba(255, 255, 255);
+
+
+}
+.textArea-titleCrew {
+    font-size: 5.6rem;
+    font-family: var(--bellefair);
+    font-weight: 400;
+    color: white;
+    margin-bottom: 2.7rem;
+    transform: translate(-1000px);
+
+}
+.textArea-navBarCrewMobile {
+    display: none;
+}
+
+.textArea-statutCrew {
+    font-size: 3.2rem;
+    font-family: var(--bellefair);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1.5rem;
+    transform: translate(-1000px);
+    
+
+}
+.textArea-paragraphCrew {
+    color: var(--light);
+    font-family: var(--barlow);
+    font-size: 1.8rem;
+    line-height: 32px;
+    font-weight: 400;
+    opacity: 0;
+    margin-bottom: 12rem;
+    width: 50rem;
+    height: 12.8rem;
+}
+
+
+/* ------------------------ Technology Main Desktop ------------------------- */
+
+.technology-container {
+    display: grid;
+    min-height: calc(100vh - 12.6rem);
+    padding-top: 7.6rem;
+    grid: 
+    "title ." auto
+    "article imgD" 1fr / auto auto
+    ;
+    
+}
+
+.technology-imgLandscape {
+    display: none;
+    grid-area: imgL;
+}
+.technology-imgPortrait {
+    justify-self: right;
+    position: relative;
+    grid-area: imgD;
+    top: 2.6rem;
+}
+
+.category-title {
+    position: relative;
+    color: white;
+    font-size: 2.8rem;
+    font-family: var(--barlow);
+    letter-spacing: 4.72px;
+    font-weight: 400;
+    grid-area: title;
+    justify-self: left;
+    left: 16.5rem;
+}
+
+.title-strong {
+    color: white;
+    opacity: 0.25;
+    margin-right: 2.8rem;
+}
+
+.technology-categories {
+    
+    height: 30.4rem;
+    
+}
+
+.technology-menu {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    height: 100%;
+}
+
+.menu-elementTechnology {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:8rem;
+    height:8rem;
+    border-radius: 50%;
+    font-size: 3.2rem;
+    color: white;
+    background-color: none;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-elementTechnology:hover {
+    border: 1px solid rgba(255, 255, 255,1);
+
+}
+
+.menu-elementTechnology_active {
+    color: black;
+    background-color: white;
+}
+
+.article-container {
+    grid-area: article;
+    display: flex;
+    align-items: flex-start;
+    justify-self: center;
+    align-self: top;
+    position: relative;
+    top: 13.7rem;
+   
+}
+
+.technology-article {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+    
+}
+.article-subtitle {
+    color: var(--light);
+    font-family: var(--barlow);
+    font-size: 1.6rem;
+    letter-spacing: 2.7px;
+    font-weight: 400;
+    margin-bottom: 1.1rem;
+}
+
+.article-name {
+    color: white;
+    font-size: 5.6rem;
+    font-weight: 400;
+    font-family: var(--bellefair);
+    margin-bottom: 1.7rem;
+    
+}
+
+.article-p {
+    color: var(--light);
+    font-family: var(--barlow);
+    font-weight: 400;
+    font-size: 1.8rem;
+    width: 47rem;
+    line-height: 3.2rem;
+}

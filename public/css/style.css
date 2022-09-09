@@ -1,0 +1,10 @@
+:root {
+    /* Colors */
+    --dark: #0B0D17;
+    --light: #D0D6F9;
+    --white : #FFFFFF;
+
+    /* Fonts */
+    --bellefair :'Bellefair', serif ;
+    --barlow :'Barlow Condensed', sans-serif ;
+}
