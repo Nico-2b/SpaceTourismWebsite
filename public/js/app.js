@@ -20,7 +20,7 @@ var imagesTechnoLandscape = transports.map(i => {
 
 var preloaded = 0;
 var images = [...imagesCrew, ...imagesPlanet,...imagesTechnoLandscape,...imagesTechnoPortrait, '../../assets/crew/background-crew-desktop.jpg','../../assets/crew/background-crew-mobile.jpg','../../assets/crew/background-crew-tablet.jpg', '../../assets/destination/background-destination-desktop.jpg', '../../assets/destination/background-destination-mobile.jpg', '../../assets/destination/background-destination-tablet.jpg', '../../assets/technology/background-technology-desktop.jpg','../../assets/technology/background-technology-mobile.jpg', '../../assets/technology/background-technology-tablet.jpg']
- console.log(images);
+
 function preLoader(e) {
     for (var i = 0; i < images.length; i++) {
         var tempImage = new Image();
