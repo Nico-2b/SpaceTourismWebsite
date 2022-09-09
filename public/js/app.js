@@ -4,9 +4,43 @@ import data from "../../data.js"
 const planet = data[0].destinations;
 const member = data[0].crew;
 const transports = data[0].technology;
+// Scripts Chargement d'images
+var imagesPlanet = planet.map(i => {
+  return i.images.webp;
+})
+var imagesCrew = member.map(i => {
+  return i.images.webp;
+})
+var imagesTechnoPortrait = transports.map(i => {
+  return i.images.portrait;
+})
+var imagesTechnoLandscape = transports.map(i => {
+  return i.images.landscape;
+})
+
+var preloaded = 0;
+var images = [...imagesCrew, ...imagesPlanet,...imagesTechnoLandscape,...imagesTechnoPortrait, '../../assets/crew/background-crew-desktop.jpg','../../assets/crew/background-crew-mobile.jpg','../../assets/crew/background-crew-tablet.jpg', '../../assets/destination/background-destination-desktop.jpg', '../../assets/destination/background-destination-mobile.jpg', '../../assets/destination/background-destination-tablet.jpg', '../../assets/technology/background-technology-desktop.jpg','../../assets/technology/background-technology-mobile.jpg', '../../assets/technology/background-technology-tablet.jpg']
+ console.log(images);
+function preLoader(e) {
+    for (var i = 0; i < images.length; i++) {
+        var tempImage = new Image();
+         
+        tempImage.addEventListener("load", progress, true);
+        tempImage.src = images[i];
+    }
+}
+ 
+function progress() {
+    preloaded++;
+     
+    if (preloaded == images.length) {
+        console.log("images préchargées");
+    }
+}
 
 
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function(e) {
+  preLoader(e);
     // Déclarations des Constantes 
     const nav = document.querySelector(".head-navbar");
     const hamburger = document.querySelector("#hamburger");
@@ -630,5 +664,5 @@ if(category.attributes.id.value === "destination") {
       imgPortrait.style.animation = "none";
     },1000)
   }
-})
+},true)
 
